@@ -6,7 +6,6 @@ import (
 	"reflect"
 
 	"github.com/caioeverest/vulcan/infra/git"
-
 	"github.com/caioeverest/vulcan/infra/config"
 	"github.com/spf13/cobra"
 )

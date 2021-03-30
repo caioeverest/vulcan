@@ -13,8 +13,8 @@ import (
 
 func init() {
 	rootCmd.AddCommand(createCMD)
-	createCMD.Flags().StringVarP(&templateAddress, "custom-template", "c", "", "the path of your custom template folder")
-	createCMD.Flags().StringVarP(&customPlaceholdersPath, "custom-placeholders", "p", "", "the path of your custom placeholders file [must be on json format]")
+	createCMD.Flags().StringVarP(&templateAddress, "template", "t", "", "the path of your custom template")
+	createCMD.Flags().StringVarP(&customPlaceholdersPath, "placeholders", "p", "", "the path of your custom placeholders file [must be on json format]")
 }
 
 var (
