@@ -32,13 +32,13 @@ archives:
       files:
         - LICENSE
 
-snapcrafts:
-  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
-    summary: Scanfold tool to create projects based on templates.
-    description: This app is a CLI tool that helps you to create projects from predefined templates.
-    grade: stable
-    confinement: classic
-    publish: true
+# snapcrafts:
+#   - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+#     summary: Scanfold tool to create projects based on templates.
+#     description: This app is a CLI tool that helps you to create projects from predefined templates.
+#     grade: stable
+#     confinement: classic
+#     publish: true
 
 brews:
   - tap:
