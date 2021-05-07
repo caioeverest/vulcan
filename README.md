@@ -4,9 +4,15 @@ This is a simple CLI that creates a new project using a template project.
 
 ## Install
 
+### Mac:
+
+If you are using Mac OS you can download the binary with homebrew by executing the command `brew install caioeverest/tap/vulcan`
+
+### Others
+
 To install the app you can download the last version on the release page and put the binary at your path or bin folder.
 
-> On future iterations we will add support for the snap, flatpak, and brew repositories
+> On future iterations we will add support for snap and flatpak
 
 ## Config
 
