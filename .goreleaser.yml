@@ -11,15 +11,6 @@ builds:
       goos:
         - linux
         - darwin
-archives:
-    - name_template: '{{ .ProjectName }}_{{ .Version }}-{{ .Os }}-{{ .Arch }}'
-      replacements:
-        '386': i386
-        darwin: macOS
-        linux: Linux
-        amd64: x86_64
-      files:
-        - LICENSE
 checksum:
     name_template: checksums.txt
 snapshot:
@@ -30,3 +21,36 @@ changelog:
         exclude:
             - '^docs:'
             - '^test:'
+
+archives:
+    - name_template: '{{ .ProjectName }}_{{ .Version }}-{{ .Os }}-{{ .Arch }}'
+      replacements:
+        '386': i386
+        darwin: macOS
+        linux: Linux
+        amd64: x86_64
+      files:
+        - LICENSE
+
+snapcrafts:
+  - name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    summary: Scanfold tool to create projects based on templates.
+    description: This app is a CLI tool that helps you to create projects from predefined templates.
+    grade: stable
+    confinement: classic
+    publish: true
+
+brews:
+  - tap:
+      owner: caioeverest
+      name: homebrew-tap
+    folder: Formula
+    homepage:  https://github.com/caioeverest/vulcan
+    description: Scanfold tool to create projects based on templates.
+    license: GPL-3.0
+    test: |
+      system "#{bin}/vulcan -v"
+    dependencies:
+    - name: go
+    install: |-
+      bin.install "vulcan"
