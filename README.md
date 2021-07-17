@@ -86,7 +86,7 @@ flag                 |required |description
 
 ## Templates
 
-You can see an example on ``
+You can see an example on `https://github.com/caioeverest/template-golang`
 
 ## Placeholder
 
