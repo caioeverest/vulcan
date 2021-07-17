@@ -39,7 +39,7 @@ var (
 				customPlaceholders = readCustomMap(conf)
 			}
 
-			c.Info("Ready to project a new project?!")
+			c.Info("Ready to create a new project?!")
 
 			projectName := c.Prompt.String("Tel me, what is the name of your project", "Something Awesome")
 			description := c.Prompt.String("And what did will do?", "Something, definably")
